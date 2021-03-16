@@ -8,21 +8,12 @@
 import Foundation
 
 struct Meals: Decodable {
-  let meals: [Food]
-  
-//  enum CodingKeys: String, CodingKey {
-//    case meals
-//  }
-//  
-//  public init(from decoder: Decoder) throws {
-//    let container = try decoder.container(keyedBy: CodingKeys.self)
-//    self.meals = try container.decode([Food].self, forKey: .meals)
-//  }
+  let meals: [Food]?
 }
 
 struct Food: Decodable {
   let dateModified: String?
-  let idMeal: Int?
+  let idMeal: String?
   let strArea: String?
   let strCategory: String?
   let strCreativeCommonsConfirmed : String?
@@ -53,7 +44,7 @@ struct Food: Decodable {
   let strMealThumb: String?
   let strMeasure1: String?
   let strMeasure10: String?
-  let strMeasure11: Int?
+  let strMeasure11: String?
   let strMeasure12: String?
   let strMeasure13 : String?
   let strMeasure14 : String?
@@ -74,68 +65,4 @@ struct Food: Decodable {
   let strSource: String?
   let strTags: String?
   let strYoutube: String?
-  
-  enum CodingKeys: String, CodingKey {
-    case dateModified
-    case idMeal
-    case strArea
-    case strCategory
-    case strCreativeCommonsConfirmed
-    case strDrinkAlternate
-    case strImageSource
-    case strIngredient1
-    case strIngredient10
-    case strIngredient11
-    case strIngredient12
-    case strIngredient13
-    case strIngredient14
-    case strIngredient15
-    case strIngredient16
-    case strIngredient17
-    case strIngredient18
-    case strIngredient19
-    case strIngredient2
-    case strIngredient20
-    case strIngredient3
-    case strIngredient4
-    case strIngredient5
-    case strIngredient6
-    case strIngredient7
-    case strIngredient8
-    case strIngredient9
-    case strInstructions
-    case strMeal
-    case strMealThumb
-    case strMeasure1
-    case strMeasure10
-    case strMeasure11
-    case strMeasure12
-    case strMeasure13
-    case strMeasure14
-    case strMeasure15
-    case strMeasure16
-    case strMeasure17
-    case strMeasure18
-    case strMeasure19
-    case strMeasure2
-    case strMeasure20
-    case strMeasure3
-    case strMeasure4
-    case strMeasure5
-    case strMeasure6
-    case strMeasure7
-    case strMeasure8
-    case strMeasure9
-    case strSource
-    case strTags
-    case strYoutube
-  }
-  
-//  public init(from decoder: Decoder) throws {
-//    let container = try decoder.container(keyedBy: CodingKeys.self)
-//    self.dateModified = try container.decode(String.self, forKey: .dateModified)
-//    self.idMeal = try container.decode(Int.self, forKey: .idMeal)
-//    self.strArea = try container.decode(String.self, forKey: .strArea)
-//    self.strCategory = try container.decode(String.self, forKey: .strCategory)
-//  }
 }

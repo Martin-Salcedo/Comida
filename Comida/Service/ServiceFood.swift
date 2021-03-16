@@ -17,7 +17,7 @@ class ServiceFoodProvider {
     let kStatusOk = 200...299
     AF.request(url, method: .get).validate(statusCode: kStatusOk).responseDecodable (of: Meals.self) {
       response in
-      if let food = response.value?.meals {
+      if let food = response.value?.meals?.count {
         print(food)
       } else {
         print(response.error?.responseCode)
