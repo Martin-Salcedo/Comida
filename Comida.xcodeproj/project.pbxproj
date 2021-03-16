@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		034BEE11D5272E38B5D659BA /* Pods_Comida_ComidaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F34B6BD7F9734C01002E1926 /* Pods_Comida_ComidaUITests.framework */; };
+		1349DA3C463A8CFE1276F845 /* Pods_ComidaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD28B92D5D86703CEEE6BA48 /* Pods_ComidaTests.framework */; };
+		178DB586C66425207F79F063 /* Pods_Comida.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5A058F10F7584D3672EFC7 /* Pods_Comida.framework */; };
 		CE0A247F260012E400516D45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A247E260012E400516D45 /* AppDelegate.swift */; };
 		CE0A2481260012E400516D45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A2480260012E400516D45 /* SceneDelegate.swift */; };
 		CE0A2483260012E400516D45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A2482260012E400516D45 /* ViewController.swift */; };
@@ -16,6 +19,8 @@
 		CE0A248E260012E700516D45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0A248C260012E700516D45 /* LaunchScreen.storyboard */; };
 		CE0A2499260012E700516D45 /* ComidaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A2498260012E700516D45 /* ComidaTests.swift */; };
 		CE0A24A4260012E700516D45 /* ComidaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A24A3260012E700516D45 /* ComidaUITests.swift */; };
+		CE0A24BD26001DD200516D45 /* ServiceFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A24BC26001DD200516D45 /* ServiceFood.swift */; };
+		CE0A24CF260026EE00516D45 /* ModelFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A24CE260026EE00516D45 /* ModelFood.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		025A8F7141282079519AADD8 /* Pods-ComidaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComidaTests.debug.xcconfig"; path = "Target Support Files/Pods-ComidaTests/Pods-ComidaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4B5A058F10F7584D3672EFC7 /* Pods_Comida.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Comida.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70786E92ACA6CB1C637E154B /* Pods-Comida-ComidaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comida-ComidaUITests.release.xcconfig"; path = "Target Support Files/Pods-Comida-ComidaUITests/Pods-Comida-ComidaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7557546E3110D3AEA23551E4 /* Pods-Comida.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comida.debug.xcconfig"; path = "Target Support Files/Pods-Comida/Pods-Comida.debug.xcconfig"; sourceTree = "<group>"; };
+		8DFE309DCCECF848856D88C9 /* Pods-Comida-ComidaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comida-ComidaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Comida-ComidaUITests/Pods-Comida-ComidaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CD28B92D5D86703CEEE6BA48 /* Pods_ComidaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ComidaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0A247B260012E400516D45 /* Comida.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Comida.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0A247E260012E400516D45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE0A2480260012E400516D45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +62,11 @@
 		CE0A249F260012E700516D45 /* ComidaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComidaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0A24A3260012E700516D45 /* ComidaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComidaUITests.swift; sourceTree = "<group>"; };
 		CE0A24A5260012E700516D45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE0A24BC26001DD200516D45 /* ServiceFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFood.swift; sourceTree = "<group>"; };
+		CE0A24CE260026EE00516D45 /* ModelFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFood.swift; sourceTree = "<group>"; };
+		EAFCA86A3241DEFE7A76BEBA /* Pods-Comida.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comida.release.xcconfig"; path = "Target Support Files/Pods-Comida/Pods-Comida.release.xcconfig"; sourceTree = "<group>"; };
+		F34B6BD7F9734C01002E1926 /* Pods_Comida_ComidaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Comida_ComidaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F42E1847C1735A9B4907CDC5 /* Pods-ComidaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComidaTests.release.xcconfig"; path = "Target Support Files/Pods-ComidaTests/Pods-ComidaTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				178DB586C66425207F79F063 /* Pods_Comida.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1349DA3C463A8CFE1276F845 /* Pods_ComidaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +90,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				034BEE11D5272E38B5D659BA /* Pods_Comida_ComidaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C1B9537AE97CEA954EE7229 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B5A058F10F7584D3672EFC7 /* Pods_Comida.framework */,
+				F34B6BD7F9734C01002E1926 /* Pods_Comida_ComidaUITests.framework */,
+				CD28B92D5D86703CEEE6BA48 /* Pods_ComidaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A33DAA5375D281CC1953483E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7557546E3110D3AEA23551E4 /* Pods-Comida.debug.xcconfig */,
+				EAFCA86A3241DEFE7A76BEBA /* Pods-Comida.release.xcconfig */,
+				8DFE309DCCECF848856D88C9 /* Pods-Comida-ComidaUITests.debug.xcconfig */,
+				70786E92ACA6CB1C637E154B /* Pods-Comida-ComidaUITests.release.xcconfig */,
+				025A8F7141282079519AADD8 /* Pods-ComidaTests.debug.xcconfig */,
+				F42E1847C1735A9B4907CDC5 /* Pods-ComidaTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CE0A2472260012E400516D45 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +127,8 @@
 				CE0A2497260012E700516D45 /* ComidaTests */,
 				CE0A24A2260012E700516D45 /* ComidaUITests */,
 				CE0A247C260012E400516D45 /* Products */,
+				A33DAA5375D281CC1953483E /* Pods */,
+				2C1B9537AE97CEA954EE7229 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +145,11 @@
 		CE0A247D260012E400516D45 /* Comida */ = {
 			isa = PBXGroup;
 			children = (
+				CE0A24CD260026E200516D45 /* Model */,
+				CE0A24BB26001D1A00516D45 /* Service */,
+				CE0A24B726001C7A00516D45 /* Buscador */,
 				CE0A247E260012E400516D45 /* AppDelegate.swift */,
 				CE0A2480260012E400516D45 /* SceneDelegate.swift */,
-				CE0A2482260012E400516D45 /* ViewController.swift */,
-				CE0A2484260012E400516D45 /* Main.storyboard */,
 				CE0A248A260012E700516D45 /* Assets.xcassets */,
 				CE0A248C260012E700516D45 /* LaunchScreen.storyboard */,
 				CE0A248F260012E700516D45 /* Info.plist */,
@@ -131,6 +176,31 @@
 			path = ComidaUITests;
 			sourceTree = "<group>";
 		};
+		CE0A24B726001C7A00516D45 /* Buscador */ = {
+			isa = PBXGroup;
+			children = (
+				CE0A2482260012E400516D45 /* ViewController.swift */,
+				CE0A2484260012E400516D45 /* Main.storyboard */,
+			);
+			path = Buscador;
+			sourceTree = "<group>";
+		};
+		CE0A24BB26001D1A00516D45 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CE0A24BC26001DD200516D45 /* ServiceFood.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CE0A24CD260026E200516D45 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE0A24CE260026EE00516D45 /* ModelFood.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +208,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE0A24A8260012E700516D45 /* Build configuration list for PBXNativeTarget "Comida" */;
 			buildPhases = (
+				1E38B46B75D01571FF24ACE6 /* [CP] Check Pods Manifest.lock */,
 				CE0A2477260012E400516D45 /* Sources */,
 				CE0A2478260012E400516D45 /* Frameworks */,
 				CE0A2479260012E400516D45 /* Resources */,
+				719B2E446FF663BA3CF55E4B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +227,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE0A24AB260012E700516D45 /* Build configuration list for PBXNativeTarget "ComidaTests" */;
 			buildPhases = (
+				0B84E88115B406834FDE8E74 /* [CP] Check Pods Manifest.lock */,
 				CE0A2490260012E700516D45 /* Sources */,
 				CE0A2491260012E700516D45 /* Frameworks */,
 				CE0A2492260012E700516D45 /* Resources */,
@@ -173,9 +246,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE0A24AE260012E700516D45 /* Build configuration list for PBXNativeTarget "ComidaUITests" */;
 			buildPhases = (
+				CC0ADE639DF55FBF2E581A24 /* [CP] Check Pods Manifest.lock */,
 				CE0A249B260012E700516D45 /* Sources */,
 				CE0A249C260012E700516D45 /* Frameworks */,
 				CE0A249D260012E700516D45 /* Resources */,
+				C3D77FB59CDC98038755F70E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,15 +331,120 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B84E88115B406834FDE8E74 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ComidaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E38B46B75D01571FF24ACE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Comida-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		719B2E446FF663BA3CF55E4B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Comida/Pods-Comida-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Comida/Pods-Comida-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Comida/Pods-Comida-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3D77FB59CDC98038755F70E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Comida-ComidaUITests/Pods-Comida-ComidaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Comida-ComidaUITests/Pods-Comida-ComidaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Comida-ComidaUITests/Pods-Comida-ComidaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC0ADE639DF55FBF2E581A24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Comida-ComidaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE0A2477260012E400516D45 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CE0A2489260012E400516D45 /* Comida.xcdatamodeld in Sources */,
+				CE0A24BD26001DD200516D45 /* ServiceFood.swift in Sources */,
 				CE0A2483260012E400516D45 /* ViewController.swift in Sources */,
 				CE0A247F260012E400516D45 /* AppDelegate.swift in Sources */,
 				CE0A2481260012E400516D45 /* SceneDelegate.swift in Sources */,
+				CE0A24CF260026EE00516D45 /* ModelFood.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +617,7 @@
 		};
 		CE0A24A9260012E700516D45 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7557546E3110D3AEA23551E4 /* Pods-Comida.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -455,6 +636,7 @@
 		};
 		CE0A24AA260012E700516D45 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAFCA86A3241DEFE7A76BEBA /* Pods-Comida.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -473,6 +655,7 @@
 		};
 		CE0A24AC260012E700516D45 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 025A8F7141282079519AADD8 /* Pods-ComidaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +677,7 @@
 		};
 		CE0A24AD260012E700516D45 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F42E1847C1735A9B4907CDC5 /* Pods-ComidaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +699,7 @@
 		};
 		CE0A24AF260012E700516D45 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DFE309DCCECF848856D88C9 /* Pods-Comida-ComidaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -534,6 +719,7 @@
 		};
 		CE0A24B0260012E700516D45 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70786E92ACA6CB1C637E154B /* Pods-Comida-ComidaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -7,6 +7,8 @@ target 'Comida' do
 
   # Pods for Comida
 
+  pod 'Alamofire', '~> 5.2'
+
   target 'ComidaTests' do
     inherit! :search_paths
     # Pods for testing
