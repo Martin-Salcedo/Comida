@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "537C50C9-259E-4572-A970-CB5CC6CB10BE"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Comida/Service/ServiceFood.swift"
@@ -16,7 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
             endingLineNumber = "20"
-            landmarkName = "getListFood(textSearch:)"
+            landmarkName = "getListFood(textSearch:success:failure:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

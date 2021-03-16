@@ -12,15 +12,15 @@ class ServiceFoodProvider {
   
   static let shared = ServiceFoodProvider()
   
-  func getListFood(textSearch: String) {
+  func getListFood(textSearch: String, success: @escaping(_ data: [Food]) -> (), failure: @escaping(_ error: Error?) -> ()) {
     let url = "https://www.themealdb.com/api/json/v1/1/search.php?s=\(textSearch)"
     let kStatusOk = 200...299
     AF.request(url, method: .get).validate(statusCode: kStatusOk).responseDecodable (of: Meals.self) {
       response in
-      if let food = response.value?.meals?.count {
-        print(food)
+      if let food = response.value?.meals {
+        success(food)
       } else {
-        print(response.error?.responseCode)
+        failure(response.error)
       }
     }
   }

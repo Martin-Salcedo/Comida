@@ -13,13 +13,12 @@ class ViewController: UIViewController {
   
   let searchController = UISearchController(searchResultsController: nil)
 
-  var food = ["tacos", "torta", "hamburgesa", "sincronizada"]
+  var food = [Food]()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.delegate = self
     tableView.dataSource = self
-    ServiceFoodProvider.shared.getListFood(textSearch: "taco")
     setupConfigSearchBar()
   }
   
@@ -39,13 +38,19 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-    cell.textLabel?.text = food[indexPath.row]
+    let nameFood = food[indexPath.row]
+    cell.textLabel?.text = nameFood.strMeal ?? ""
     return cell
   }
 }
 extension ViewController: UISearchResultsUpdating {
   func updateSearchResults(for searchController: UISearchController) {
     guard let text = searchController.searchBar.text else { return }
-    print(text)
+    ServiceFoodProvider.shared.getListFood(textSearch: text) { (data) in
+      self.food = data
+      self.tableView.reloadData()
+    } failure: { (error) in
+      print(error.debugDescription)
+    }
   }
 }
