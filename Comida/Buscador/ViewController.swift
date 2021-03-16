@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     tableView.delegate = self
     tableView.dataSource = self
+    ServiceFoodProvider.shared.getListFood(textSearch: "taco")
     setupConfigSearchBar()
   }
   

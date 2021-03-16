@@ -10,14 +10,14 @@ import Foundation
 struct Meals: Decodable {
   let meals: [Food]
   
-  enum CodingKeys: String, CodingKey {
-    case meals
-  }
-  
-  public init(from decoder: Decoder) throws {
-    let container = try decoder.container(keyedBy: CodingKeys.self)
-    self.meals = try container.decode([Food].self, forKey: .meals)
-  }
+//  enum CodingKeys: String, CodingKey {
+//    case meals
+//  }
+//  
+//  public init(from decoder: Decoder) throws {
+//    let container = try decoder.container(keyedBy: CodingKeys.self)
+//    self.meals = try container.decode([Food].self, forKey: .meals)
+//  }
 }
 
 struct Food: Decodable {
