@@ -9,15 +9,12 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+  @IBOutlet weak var imagenView: UIImageView!
+  @IBOutlet weak var titleOfFood: UILabel!
+  @IBOutlet weak var categoryOfFood: UILabel!
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    imagenView.contentMode = .scaleAspectFit
+  }
 }

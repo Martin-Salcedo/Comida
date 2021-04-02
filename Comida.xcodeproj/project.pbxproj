@@ -21,6 +21,10 @@
 		CE0A24A4260012E700516D45 /* ComidaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A24A3260012E700516D45 /* ComidaUITests.swift */; };
 		CE0A24BD26001DD200516D45 /* ServiceFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A24BC26001DD200516D45 /* ServiceFood.swift */; };
 		CE0A24CF260026EE00516D45 /* ModelFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A24CE260026EE00516D45 /* ModelFood.swift */; };
+		CE0A24DE2600516900516D45 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A24DC2600516900516D45 /* TableViewCell.swift */; };
+		CE0A24DF2600516900516D45 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0A24DD2600516900516D45 /* TableViewCell.xib */; };
+		CE0A24F026018FE600516D45 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A24EF26018FE600516D45 /* DetailViewController.swift */; };
+		CE0A2500260194EB00516D45 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0A24FF260194EB00516D45 /* DetailViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,10 @@
 		CE0A24A5260012E700516D45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE0A24BC26001DD200516D45 /* ServiceFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFood.swift; sourceTree = "<group>"; };
 		CE0A24CE260026EE00516D45 /* ModelFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFood.swift; sourceTree = "<group>"; };
+		CE0A24DC2600516900516D45 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		CE0A24DD2600516900516D45 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		CE0A24EF26018FE600516D45 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CE0A24FF260194EB00516D45 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
 		EAFCA86A3241DEFE7A76BEBA /* Pods-Comida.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comida.release.xcconfig"; path = "Target Support Files/Pods-Comida/Pods-Comida.release.xcconfig"; sourceTree = "<group>"; };
 		F34B6BD7F9734C01002E1926 /* Pods_Comida_ComidaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Comida_ComidaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42E1847C1735A9B4907CDC5 /* Pods-ComidaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComidaTests.release.xcconfig"; path = "Target Support Files/Pods-ComidaTests/Pods-ComidaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,7 +153,9 @@
 		CE0A247D260012E400516D45 /* Comida */ = {
 			isa = PBXGroup;
 			children = (
-				CE0A24CD260026E200516D45 /* Model */,
+				CE0A24EE26018FC000516D45 /* Detail */,
+				CE0A24DB2600515600516D45 /* Cell */,
+				CE0A24CD260026E200516D45 /* Model & protocols */,
 				CE0A24BB26001D1A00516D45 /* Service */,
 				CE0A24B726001C7A00516D45 /* Buscador */,
 				CE0A247E260012E400516D45 /* AppDelegate.swift */,
@@ -193,12 +203,30 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		CE0A24CD260026E200516D45 /* Model */ = {
+		CE0A24CD260026E200516D45 /* Model & protocols */ = {
 			isa = PBXGroup;
 			children = (
 				CE0A24CE260026EE00516D45 /* ModelFood.swift */,
 			);
-			path = Model;
+			path = "Model & protocols";
+			sourceTree = "<group>";
+		};
+		CE0A24DB2600515600516D45 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE0A24DC2600516900516D45 /* TableViewCell.swift */,
+				CE0A24DD2600516900516D45 /* TableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CE0A24EE26018FC000516D45 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CE0A24EF26018FE600516D45 /* DetailViewController.swift */,
+				CE0A24FF260194EB00516D45 /* DetailViewController.storyboard */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +338,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0A248E260012E700516D45 /* LaunchScreen.storyboard in Resources */,
+				CE0A24DF2600516900516D45 /* TableViewCell.xib in Resources */,
+				CE0A2500260194EB00516D45 /* DetailViewController.storyboard in Resources */,
 				CE0A248B260012E700516D45 /* Assets.xcassets in Resources */,
 				CE0A2486260012E400516D45 /* Main.storyboard in Resources */,
 			);
@@ -444,7 +474,9 @@
 				CE0A2483260012E400516D45 /* ViewController.swift in Sources */,
 				CE0A247F260012E400516D45 /* AppDelegate.swift in Sources */,
 				CE0A2481260012E400516D45 /* SceneDelegate.swift in Sources */,
+				CE0A24DE2600516900516D45 /* TableViewCell.swift in Sources */,
 				CE0A24CF260026EE00516D45 /* ModelFood.swift in Sources */,
+				CE0A24F026018FE600516D45 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
