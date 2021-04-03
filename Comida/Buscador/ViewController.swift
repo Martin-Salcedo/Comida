@@ -11,9 +11,18 @@ class ViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   
+  /// definition of search bar
   let searchController = UISearchController(searchResultsController: nil)
+  var isSearchBarEmpty: Bool {
+    return searchController.searchBar.text?.isEmpty ?? true
+  }
+  
+  var isFiltering: Bool {
+    return searchController.isActive && !isSearchBarEmpty
+  }
   
   var food = [Food]()
+  var filteredFood: [Food] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -23,24 +32,38 @@ class ViewController: UIViewController {
     setupConfigSearchBar()
   }
   
+  
+  /// Condig the search bar
   private func setupConfigSearchBar() {
+    searchController.searchBar.delegate = self
     searchController.searchResultsUpdater = self
     searchController.obscuresBackgroundDuringPresentation = false
     searchController.searchBar.placeholder = "Search Food"
     navigationItem.searchController = searchController
     definesPresentationContext = true
-    
   }
   
+  func filterContentForSearchText(_ searchText: String) {
+    ServiceFoodProvider.shared.getListFood(textSearch: searchText) { (data) in
+      self.filteredFood = data
+      self.tableView.reloadData()
+    } failure: { (error) in
+      print(error.debugDescription)
+    }
+  }
+
 }
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    food.count
+    if isFiltering {
+      return filteredFood.count
+    }
+    return food.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "food", for: indexPath) as? TableViewCell else { return UITableViewCell() }
-    let nameFood = food[indexPath.row]
+    let nameFood = isFiltering ? filteredFood[indexPath.row] : food[indexPath.row]
     cell.titleOfFood.text = nameFood.strMeal ?? ""
     cell.categoryOfFood.text = nameFood.strCategory ?? ""
     cell.imagenView.downloaded(from: nameFood.strMealThumb ?? "")
@@ -49,7 +72,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    print("selected item \(food[indexPath.row].idMeal ?? "")")
+//    print("selected item \(food[indexPath.row].idMeal ?? "")")
     
     //    let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
     //    let navController = UINavigationController(rootViewController: VC1)
@@ -68,14 +91,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 }
 extension ViewController: UISearchResultsUpdating {
   func updateSearchResults(for searchController: UISearchController) {
-    guard let text = searchController.searchBar.text else { return }
-    print("texto buscado \(text)")
-//    ServiceFoodProvider.shared.getListFood(textSearch: text) { (data) in
-//      self.food = data
-//      self.tableView.reloadData()
-//    } failure: { (error) in
-//      print(error.debugDescription)
-//    }
+//    TODO: implementar para buscar en automatico
+  }
+}
+extension ViewController: UISearchBarDelegate {
+
+  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    guard let text = searchBar.text else { return }
+    filterContentForSearchText(text)
   }
 }
 extension UIImageView {
