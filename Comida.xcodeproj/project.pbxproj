@@ -25,6 +25,7 @@
 		CE0A24DF2600516900516D45 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0A24DD2600516900516D45 /* TableViewCell.xib */; };
 		CE0A24F026018FE600516D45 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A24EF26018FE600516D45 /* DetailViewController.swift */; };
 		CE0A2500260194EB00516D45 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0A24FF260194EB00516D45 /* DetailViewController.storyboard */; };
+		CE28967B26F7FCBF0070F7F7 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE28967A26F7FCBF0070F7F7 /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		CE0A24DD2600516900516D45 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		CE0A24EF26018FE600516D45 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CE0A24FF260194EB00516D45 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
+		CE28967A26F7FCBF0070F7F7 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		EAFCA86A3241DEFE7A76BEBA /* Pods-Comida.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comida.release.xcconfig"; path = "Target Support Files/Pods-Comida/Pods-Comida.release.xcconfig"; sourceTree = "<group>"; };
 		F34B6BD7F9734C01002E1926 /* Pods_Comida_ComidaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Comida_ComidaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42E1847C1735A9B4907CDC5 /* Pods-ComidaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComidaTests.release.xcconfig"; path = "Target Support Files/Pods-ComidaTests/Pods-ComidaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		CE0A247D260012E400516D45 /* Comida */ = {
 			isa = PBXGroup;
 			children = (
+				CE28967926F7FCAD0070F7F7 /* Extensions */,
 				CE0A24EE26018FC000516D45 /* Detail */,
 				CE0A24DB2600515600516D45 /* Cell */,
 				CE0A24CD260026E200516D45 /* Model & protocols */,
@@ -227,6 +230,14 @@
 				CE0A24FF260194EB00516D45 /* DetailViewController.storyboard */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		CE28967926F7FCAD0070F7F7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE28967A26F7FCBF0070F7F7 /* UIImage.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -475,6 +486,7 @@
 				CE0A247F260012E400516D45 /* AppDelegate.swift in Sources */,
 				CE0A2481260012E400516D45 /* SceneDelegate.swift in Sources */,
 				CE0A24DE2600516900516D45 /* TableViewCell.swift in Sources */,
+				CE28967B26F7FCBF0070F7F7 /* UIImage.swift in Sources */,
 				CE0A24CF260026EE00516D45 /* ModelFood.swift in Sources */,
 				CE0A24F026018FE600516D45 /* DetailViewController.swift in Sources */,
 			);
