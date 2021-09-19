@@ -69,4 +69,15 @@ extension ViewController: UISearchBarDelegate {
         }
         tableView.reloadData()
     }
+//    funcion para mostrar el boton cancelar en la barra
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.searchBar.showsCancelButton = true
+    }
+//    funcion para detectar la accion del boton cancelar
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.text = ""
+        view.endEditing(true)
+        searchBar.resignFirstResponder()
+    }
 }
