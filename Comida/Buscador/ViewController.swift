@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var emptyLabel: UILabel!
   
   /// definition of search bar
   let searchController = UISearchController(searchResultsController: nil)
@@ -26,12 +27,14 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    tableView.isHidden = true
+    emptyLabel.isHidden = true
     tableView.delegate = self
     tableView.dataSource = self
     tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "food")
     setupConfigSearchBar()
+    emptyLabel.text = "No hay alimentos"
   }
-  
   
   /// Condig the search bar
   private func setupConfigSearchBar() {
@@ -46,8 +49,13 @@ class ViewController: UIViewController {
   func filterContentForSearchText(_ searchText: String) {
     ServiceFoodProvider.shared.getListFood(textSearch: searchText) { (data) in
       self.filteredFood = data
+      self.emptyLabel.isHidden = true
+      self.tableView.isHidden = false
       self.tableView.reloadData()
     } failure: { (error) in
+      self.tableView.isHidden = true
+      self.emptyLabel.isHidden = false
+      self.emptyLabel.text = "No se encontraron resultados"
       print(error.debugDescription)
     }
   }
@@ -72,21 +80,20 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//    print("selected item \(food[indexPath.row].idMeal ?? "")")
     
-    //    let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-    //    let navController = UINavigationController(rootViewController: VC1)
-    //    navController.pushViewController(VC1, animated: true)
-    //    self.present(navController, animated:true, completion: nil)
-    
-    //    guard let VC1 = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
-    //    self.navigationController!.pushViewController(VC1, animated: true)
-    
-    //    let storyboard = UIStoryboard(name: "DetailViewController", bundle: NSBundle())
-    //    let customViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController")
-    ////    self.present(customViewController, animated: true, completion: nil)
-    //    let navController = UINavigationController(rootViewController: customViewController)
-    //    navController.pushViewController(customViewController, animated: true)
+    let vc = DetailViewController(nibName: "DetailViewController", bundle: nil)
+    vc.idFood = "si seleciono"
+//    navigationController?.pushViewController(vc, animated: true)
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    switch segue.identifier {
+    case "DetailViewController":
+      let vc = segue.destination as! DetailViewController
+      vc.idFood = "la comida es"
+    default:
+      break
+    }
   }
 }
 extension ViewController: UISearchResultsUpdating {
@@ -100,6 +107,18 @@ extension ViewController: UISearchBarDelegate {
     guard let text = searchBar.text else { return }
     filterContentForSearchText(text)
   }
+  
+  func searchBarShouldBeginEditing(_: UISearchBar) -> Bool {
+    tableView.isHidden = true
+    emptyLabel.isHidden = true
+    return true
+  }
+
+  func searchBarCancelButtonClicked(_: UISearchBar) {
+    tableView.isHidden = true
+    emptyLabel.isHidden = true
+  }
+
 }
 extension UIImageView {
   func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
