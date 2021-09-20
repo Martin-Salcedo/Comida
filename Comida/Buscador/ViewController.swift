@@ -34,6 +34,7 @@ class ViewController: UIViewController, Storyboardable {
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "food")
         setupConfigSearchBar()
         emptyLabel.text = "No hay alimentos"
+        testVariablesComputalizada()
     }
     
     /// Condig the search bar
@@ -85,12 +86,35 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     private func showDetailFood(nameOfFood: String) {
-//        guard let detailController = UIStoryboard(name: "DetailViewController", bundle: .main).instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else {
-//                fatalError("Unable to Instantiate Quotes View Controller")
-//            }
         let detailViewController = DetailViewController.instantiate()
         detailViewController.nameOfFoodSelected = nameOfFood
         navigationController?.pushViewController(detailViewController, animated: true)
+    }
+    
+    private func testVariablesComputalizada() {
+        var square = Rect(origin: Point(x: 0.0, y: 0.0), size: Size(width: 10.0, height: 10.0))
+
+        print("\n- La figura comienza en el punto (\(square.origin.x), \(square.origin.y))")
+
+        print("\n- El centro se encuentra en el punto (\(square.center.x), \(square.center.y))")
+
+        print("\n- El área de la figura es de \(square.area) unidades")
+
+        let initialSquareCenter = square.center
+
+        square.center = Point(x: 15.0, y: 15.0)
+
+        print("\n* Movemos el centro de la figura al punto (15, 15)")
+
+        square.size = Size(width: 300, height: 100)
+
+        print("\n* Establecemos el tamaño de la figura a 300x100")
+
+        print("\n- La figura comienza en el punto (\(square.origin.x), \(square.origin.y))")
+
+        print("\n- El centro se encuentra en el punto (\(square.center.x), \(square.center.y))")
+
+        print("\n- El área de la figura es de \(square.area) unidades")
     }
 }
 extension ViewController: UISearchResultsUpdating {
