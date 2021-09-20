@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, Storyboardable {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var emptyLabel: UILabel!
@@ -80,24 +80,17 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-//        self.performSegue(withIdentifier: "DetailViewController", sender: nil)
-        self.performSegue(withIdentifier: "DetailViewController", sender: self)
-//        let vc = DetailViewController(nibName: "DetailViewController", bundle: nil)
-//        vc.idFood = "si seleciono"
-        //    navigationController?.pushViewController(vc, animated: true)
+        let nameFood = isFiltering ? filteredFood[indexPath.row] : food[indexPath.row]
+        showDetailFood(nameOfFood: nameFood.strMeal ?? "")
     }
     
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let path = tableView.indexPathForSelectedRow else  { return }
-        if segue.identifier == "DetailViewController" {
-            if let destination = segue.destination as? DetailViewController {
-                guard let path = tableView.indexPathForSelectedRow else  { return }
-                let cell = tableView.cellForRow(at: path)
-                destination.idFood = cell?.textLabel?.text ?? "hola mundo"
-            }
-        }
+    private func showDetailFood(nameOfFood: String) {
+//        guard let detailController = UIStoryboard(name: "DetailViewController", bundle: .main).instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else {
+//                fatalError("Unable to Instantiate Quotes View Controller")
+//            }
+        let detailViewController = DetailViewController.instantiate()
+        detailViewController.nameOfFoodSelected = nameOfFood
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
 extension ViewController: UISearchResultsUpdating {

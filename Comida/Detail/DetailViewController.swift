@@ -7,13 +7,15 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
-  
-  var idFood: String = ""
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    print("el numero de food es : \(idFood)")
-  }
-  
+class DetailViewController: UIViewController, Storyboardable {
+    
+    var nameOfFoodSelected: String = ""
+    @IBOutlet weak var nameFoodLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("el numero de food es : \(nameOfFoodSelected)")
+        nameFoodLabel.text = nameOfFoodSelected
+    }
+    
 }

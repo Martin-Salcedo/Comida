@@ -23,48 +23,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6C9B15DC-F53A-49C0-B061-1A3DEAF18B72"
-            shouldBeEnabled = "Yes"
+            uuid = "FC87C1C5-84BA-48D5-AF80-1CFAFBDA1C72"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Comida/Buscador/ViewController.swift"
+            filePath = "Comida/Protocols/Storyboardable.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "filterContentForSearchText(_:)"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "instantiate()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DC6497AF-C3C7-4CFA-A4E5-BEFD4E94D173"
-            shouldBeEnabled = "Yes"
+            uuid = "002B7ED4-102B-4CF3-B212-A0F97A42B911"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Comida/Buscador/ViewController.swift"
+            filePath = "Comida/Protocols/Storyboardable.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "instantiate()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0B7AFB6F-CC08-4822-8048-1405B340DAF6"
-            shouldBeEnabled = "Yes"
+            uuid = "7B43C647-2D08-4DD8-BDAB-8D55F4B3832E"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Comida/Buscador/ViewController.swift"
+            filePath = "Comida/Protocols/Storyboardable.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "prepare(for:sender:)"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "instantiate()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -15,10 +15,29 @@
                     <view key="view" contentMode="scaleToFill" id="P9a-Lc-j7q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaA-pH-P95">
+                                <rect key="frame" x="47" y="457.5" width="320" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="vbI-xC-yMu"/>
+                                    <constraint firstAttribute="height" constant="35" id="ycp-Ie-C7X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="y8i-NX-6PV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FaA-pH-P95" firstAttribute="centerY" secondItem="y8i-NX-6PV" secondAttribute="centerY" id="JA4-UG-YAO"/>
+                            <constraint firstItem="FaA-pH-P95" firstAttribute="centerX" secondItem="y8i-NX-6PV" secondAttribute="centerX" id="K5Z-QK-fpj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail of Food" id="o37-gM-mca"/>
+                    <connections>
+                        <outlet property="nameFoodLabel" destination="FaA-pH-P95" id="BNc-Sq-5S3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QXD-bT-4WH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -27,7 +46,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ZJp-wh-I8O">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bhF-kW-bXY" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bhF-kW-bXY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Ey-j9-yHx">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
